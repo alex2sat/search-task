@@ -1,0 +1,26 @@
+.searchForm {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+
+.searchForm form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+.searchForm input {
+    padding: 10px;
+    border: 1px solid gainsboro;
+    border-radius: 10px;
+}
+
+.searchForm input[type="text"] {
+    width: 300px;
+}
+  
+.searchForm input[type="submit"] {
+    width: 150px;
+}
+  
