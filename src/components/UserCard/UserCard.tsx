@@ -1,8 +1,10 @@
 import "./style.css";
+import { forwardRef } from "react";
+import type { UserCardPropsI } from "../../types";
 
-export function UserCard(props) {
+export const UserCard = forwardRef<HTMLDivElement, UserCardPropsI>((props, ref) => {
   return (
-    <div className="userCard">
+    <div className="userCard" ref={ref}>
       <img className="userPic" src={props.image} />
       <div className="userInfo">
         <div>{`${props.firstName} ${props.lastName}`}</div>
@@ -10,4 +12,6 @@ export function UserCard(props) {
       </div>
     </div>
   );
-}
+});
+
+UserCard.displayName = 'UserCard';
